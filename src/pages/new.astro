@@ -1,8 +1,59 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import Hero from '@layouts/Hero.svelte'
+import ContentLeft from '@layouts/ContentLeft.svelte'
+import ContentRight from '@layouts/ContentRight.svelte'
+import AutomateIllustration from '@assets/illustrations/Automate_illustration.png'
+import LowCodeProducts from '@assets/illustrations/lowCodeProducts.png'
 ---
 
 <Layout title="Welcome to Not So Traditional | Your Low Code / No Code Agency">
-    <Hero client:load/>
+	<Hero client:load />
+	<ContentLeft link="/automation">
+		<span slot="heading"
+			><span class="text-orange">Automate</span> your processes and enhance <span class="text-orange">Productivity</span></span
+		>
+		<span slot="description">
+			From onboarding new team members to managing leads effectively, our solution saves you time and effort. Say goodbye to manual tasks
+			and ensure seamless integration, allowing your team to focus on what truly matters.
+		</span>
+		<img
+			slot="image"
+			src={AutomateIllustration.src}
+			height={AutomateIllustration.height}
+			width={AutomateIllustration.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentLeft>
+	<ContentRight link="">
+		<span slot="heading"><span class="text-orange">Accelerate</span> your delivery with Cutting-Edge Tools</span>
+		<span slot="description">
+			Using low code/no code solutions enable you to ship faster without compromising quality. Whether you need landing pages, full web
+			applications, or mobile apps, we’ve got you covered with efficient and robust development tools.
+		</span>
+		<img
+			slot="image"
+			src={LowCodeProducts.src}
+			height={LowCodeProducts.height}
+			width={LowCodeProducts.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentRight>
+	<ContentLeft link="/ui">
+		<span slot="heading"><span class="text-orange">Design</span> a world class user experience</span>
+		<span slot="description">
+			Ready to create an exceptional experience for your users or discover why they’re not converting? Our UX/UI services are here to help
+			you delight your users and optimise engagement.
+		</span>
+		<img
+			slot="image"
+			src={AutomateIllustration.src}
+			height={AutomateIllustration.height}
+			width={AutomateIllustration.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentLeft>
 </Layout>
