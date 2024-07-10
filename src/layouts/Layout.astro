@@ -1,5 +1,6 @@
 ---
 import TopNav from '@components/Navigation/TopNav.svelte'
+import Footer from '@layouts/Footer.svelte'
 
 interface Props {
 	title: string
@@ -26,9 +27,5 @@ const { title } = Astro.props
 	<body>
 		<slot />
 	</body>
-	<!-- <footer>
-
-	</footer> -->
-
-
+	<Footer/>
 </html>
