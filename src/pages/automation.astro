@@ -1,0 +1,85 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Hero from '@layouts/Hero.svelte'
+import ContentLeft from '@layouts/ContentLeft.svelte'
+import ContentRight from '@layouts/ContentRight.svelte'
+import AutomateIllustration from '@assets/illustrations/Automate_illustration.png'
+import Logos from '@assets/illustrations/logos.png'
+import AIillustration from '@assets/illustrations/AI.png'
+import FAQ from '@layouts/FAQ.svelte'
+import Calculator from '@components/Calculator/Calculator.svelte'
+---
+
+<Layout title="Welcome to Not So Traditional | Your Low Code / No Code Agency">
+	<Hero client:load>
+		<span slot="heading">Automate to<span class="text-orange">&nbsp;do more</span></span>
+	</Hero>
+	<ContentLeft link="/enquire" id="automateHeading" client:load buttonText="Get in touch">
+		<span slot="heading"><span class="text-orange">Why</span> should you automate?</span>
+		<span slot="description">
+			Is your team regularly burnt out, missing deadlines, or making mistakes? Free your team to focus on what truly matters. Say goodbye to
+			repetitive tasks and human errors, and hello to productivity and precision. Get more done in less time.
+		</span>
+		<img
+			slot="image"
+			src={AutomateIllustration.src}
+			height={AutomateIllustration.height}
+			width={AutomateIllustration.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentLeft>
+	<ContentRight link="/enquire" id="lowCodeSection" client:visible>
+		<img
+			slot="image"
+			src={Logos.src}
+			height={Logos.height}
+			width={Logos.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+		<span slot="heading"><span class="text-orange">What</span> can be automated?</span>
+		<span slot="description">
+			If it has an API, it can be automated. From onboarding new team members to managing leads efficiently, automate repetitive tasks and
+			enrich your data seamlessly. The best part is that it requires little to no code.
+		</span>
+	</ContentRight>
+	<ContentLeft link="/enquire" id="uiHeading" client:visible>
+		<span slot="heading"><span class="text-orange">Integrate</span> the power of artificial intelligence</span>
+		<span slot="description">
+			Artificial Intelligence is revolutionising the business landscape, and it’s essential for companies to harness its capabilities. By integrating AI into your automation processes, you can gain deeper insights into your data, enhance team performance, and improve customer understanding.
+		</span>
+		<img
+			slot="image"
+			src={AIillustration.src}
+			height={AIillustration.height}
+			width={AIillustration.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentLeft>
+    <Calculator client:visible/>
+	<FAQ
+		client:visible
+		items={[
+			{
+				title: 'What is Automation as a Service?',
+				content:
+					'Automation is the process of using software to perform tasks that would otherwise be performed by humans. It involves using software tools to automate repetitive tasks, such as data entry, data processing, and data analysis.',
+				id: 'whatIsAutomation',
+			},
+			{
+				title: 'Will I be able to update my automations without devs?',
+				content:
+					'Yes, by using low code / no code automation tools, updating your automations will as simple as updating text in a spreadsheet. Do note, some solutions might require you to update code depending on the workflow.',
+				id: 'willIbeAbleToUpdateMyAutomations',
+			},
+			{
+				title: 'Is there a monthly fee for these tools?',
+				content:
+					'Yes, however these tools also have a generous free tier before a monthly or annual fee is required. Before we implement anything we will provide you with breakdown of estimated costs, along with how much you could save.',
+				id: 'whatIsNoCode',
+			},
+		]}
+	/>
+</Layout>
