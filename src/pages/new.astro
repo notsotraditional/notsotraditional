@@ -9,7 +9,9 @@ import FAQ from '@layouts/FAQ.svelte'
 ---
 
 <Layout title="Welcome to Not So Traditional | Your Low Code / No Code Agency">
-	<Hero client:load />
+	<Hero client:load>
+		<span slot="heading">We help you<span class="text-orange">&nbsp;ship faster</span></span>
+	</Hero>
 	<ContentLeft link="/automation" id="automateHeading" client:load>
 		<span slot="heading"
 			><span class="text-orange">Automate</span> your processes and enhance <span class="text-orange">Productivity</span></span

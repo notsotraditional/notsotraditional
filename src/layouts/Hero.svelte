@@ -10,7 +10,7 @@
 
 <div class="relative flex h-full w-full flex-col px-10 pt-10 md:px-10 lg:h-[600px] lg:items-center lg:justify-center lg:px-20 lg:pt-0">
 	<h1 class="text-4xl font-semibold leading-[120%] text-black md:text-6xl lg:text-8xl">
-		We help you<span class="text-orange">&nbsp;ship faster</span>
+		<slot name="heading" />
 	</h1>
 	<img src={DownArrow.src} alt="Down arrow" class="downArrow absolute bottom-0 hidden h-7 lg:block" />
 </div>
