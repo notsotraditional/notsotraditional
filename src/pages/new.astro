@@ -10,7 +10,7 @@ import FAQ from '@layouts/FAQ.svelte'
 
 <Layout title="Welcome to Not So Traditional | Your Low Code / No Code Agency">
 	<Hero client:load />
-	<ContentLeft link="/automation" id="automateHeading" client:visible>
+	<ContentLeft link="/automation" id="automateHeading" client:load>
 		<span slot="heading"
 			><span class="text-orange">Automate</span> your processes and enhance <span class="text-orange">Productivity</span></span
 		>
@@ -27,7 +27,7 @@ import FAQ from '@layouts/FAQ.svelte'
 			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
 		/>
 	</ContentLeft>
-	<ContentRight link="/code" id="lowCodeSection" client:visible>
+	<ContentRight link="/code" id="lowCodeSection" client:load>
 		<img
 			slot="image"
 			src={LowCodeProducts.src}
@@ -42,7 +42,7 @@ import FAQ from '@layouts/FAQ.svelte'
 			applications, or mobile apps, we’ve got you covered with efficient and robust development tools.
 		</span>
 	</ContentRight>
-	<ContentLeft link="/ui" id="uiHeading" client:visible>
+	<ContentLeft link="/ui" id="uiHeading" client:load>
 		<span slot="heading"><span class="text-orange">Design</span> a world class user experience</span>
 		<span slot="description">
 			Ready to create an exceptional experience for your users or discover why they’re not converting? Our UX/UI services are here to help
@@ -58,7 +58,7 @@ import FAQ from '@layouts/FAQ.svelte'
 		/>
 	</ContentLeft>
 	<FAQ
-		client:load
+		client:visible
 		items={[
 			{
 				title: 'What is Automation as a Service?',
