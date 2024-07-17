@@ -12,12 +12,7 @@
 	onMount(() => {
 		element = document.getElementById(id)
 		if (element) {
-			scroll(
-                animate(element,
-                    { opacity: [0, 1] },
-                    { duration: 1},
-                ),
-                {
+			scroll(animate(element, { opacity: [0, 1] }, { duration: 1 }), {
 				target: element,
 				offset: ['start end', 'end end'],
 			})
@@ -25,14 +20,16 @@
 	})
 </script>
 
-<div class="flex flex-col items-center gap-10 px-10 pt-16 md:pt-32 lg:flex-row lg:px-20 opacity-0" {id}>
-	<div class="flex max-w-2xl flex-col">
-		<SectionHeading>
-			<slot name="heading" slot="heading" />
-		</SectionHeading>
-		<p class="mb-10 text-base leading-[150%] text-black"><slot name="description" /></p>
-		<a href={link} class="hidden lg:block"><PrimaryCta text="Find out more" type="button" /></a>
+<div class="flex w-screen flex-col items-center">
+	<div class="flex flex-col items-center gap-10 px-10 pt-16 opacity-0 md:pt-32 lg:flex-row lg:px-20" {id}>
+		<div class="flex max-w-2xl flex-col">
+			<SectionHeading>
+				<slot name="heading" slot="heading" />
+			</SectionHeading>
+			<p class="mb-10 text-base leading-[150%] text-black"><slot name="description" /></p>
+			<a href={link} class="hidden lg:block"><PrimaryCta text="Find out more" type="button" /></a>
+		</div>
+		<slot name="image" />
+		<a href={link} class="block w-full lg:hidden"><PrimaryCta text="Find out more" type="button" /></a>
 	</div>
-	<slot name="image" />
-	<a href={link} class="block w-full lg:hidden"><PrimaryCta text="Find out more" type="button" /></a>
 </div>
