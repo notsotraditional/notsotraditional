@@ -5,6 +5,7 @@
 	import { animate, scroll } from 'motion'
 	export let link: string
 	export let id: string
+	export let buttonText: string = 'Find out more'
 
 	let element: HTMLElement | null = null
 
@@ -26,9 +27,9 @@
 				<slot name="heading" slot="heading" />
 			</SectionHeading>
 			<p class="mb-10 text-base leading-[150%] text-black"><slot name="description" /></p>
-			<a href={link} class="hidden w-full lg:block"><PrimaryCta text="Find out more" type="button" /></a>
+			<a href={link} class="hidden w-full lg:block"><PrimaryCta text={buttonText} type="button" /></a>
 		</div>
 		<slot name="image" />
-		<a href={link} class="mt-10 w-full lg:hidden"><PrimaryCta text="Find out more" type="button" /></a>
+		<a href={link} class="mt-10 w-full lg:hidden"><PrimaryCta text={buttonText} type="button" /></a>
 	</div>
 </div>
