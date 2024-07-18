@@ -8,11 +8,12 @@ import Logos from '@assets/illustrations/logos.png'
 import AIillustration from '@assets/illustrations/AI.png'
 import FAQ from '@layouts/FAQ.svelte'
 import Calculator from '@components/Calculator/Calculator.svelte'
+import Pricing from '@layouts/Pricing.svelte'
 ---
 
 <Layout title="Welcome to Not So Traditional | Your Low Code / No Code Agency">
 	<Hero client:load>
-		<span slot="heading">Automate to<span class="text-orange">&nbsp;do more</span></span>
+		<span slot="heading" class="text-center block max-w-6xl">Automate with <span class="text-orange">no code</span>, to<span class="text-orange">&nbsp;do more</span> </span>
 	</Hero>
 	<ContentLeft link="/enquire" id="automateHeading" client:load buttonText="Get in touch">
 		<span slot="heading"><span class="text-orange">Why</span> should you automate?</span>
@@ -29,7 +30,7 @@ import Calculator from '@components/Calculator/Calculator.svelte'
 			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
 		/>
 	</ContentLeft>
-	<ContentRight link="/enquire" id="lowCodeSection" client:visible>
+	<ContentRight link="/enquire" id="lowCodeSection" client:visible buttonText="Get in touch">
 		<img
 			slot="image"
 			src={Logos.src}
@@ -44,7 +45,7 @@ import Calculator from '@components/Calculator/Calculator.svelte'
 			enrich your data seamlessly. The best part is that it requires little to no code.
 		</span>
 	</ContentRight>
-	<ContentLeft link="/enquire" id="uiHeading" client:visible>
+	<ContentLeft link="/enquire" id="uiHeading" client:visible buttonText="Get in touch">
 		<span slot="heading"><span class="text-orange">Integrate</span> the power of artificial intelligence</span>
 		<span slot="description">
 			Artificial Intelligence is revolutionising the business landscape, and it’s essential for companies to harness its capabilities. By
@@ -60,6 +61,7 @@ import Calculator from '@components/Calculator/Calculator.svelte'
 			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
 		/>
 	</ContentLeft>
+	<Pricing />
 	<Calculator client:visible />
 	<FAQ
 		client:visible
@@ -81,6 +83,22 @@ import Calculator from '@components/Calculator/Calculator.svelte'
 				content:
 					'Yes, however these tools also have a generous free tier before a monthly or annual fee is required. Before we implement anything we will provide you with breakdown of estimated costs, along with how much you could save.',
 				id: 'whatIsNoCode',
+			},
+			{
+				title: 'Can I cancel my monthly subscription?',
+				content: 'Yes, you can cancel your subscription at any time. You will only be charged for the month. Unused hours will not be refunded.',
+				id: 'cancelSubscription'
+			},
+			{
+				title: 'Can I switch tiers if my needs change?',
+				content:
+					'Absolutely! Get in touch with us and we will be happy to discuss your needs.',
+				id: 'changeTiers',
+			},
+			{
+				title: 'What does the discovery service include?',
+				content: 'The discovery service helps determine what is possible for your business automation needs. It’s included in the Hybrid Tier and optional (charged per hour) in the Light Tier. Note: Prices exclude VAT and any tool subscriptions or costs.',
+				id: 'discoveryService',
 			},
 		]}
 	/>

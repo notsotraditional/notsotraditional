@@ -49,7 +49,7 @@
 			<div class="mt-5 flex flex-col gap-8 text-base lg:mt-0 lg:flex-row lg:items-center lg:ps-5">
 				<a class="font-medium text-black hover:text-orange" href="#" aria-current="page">Home</a>
 				<!-- <a class="font-medium text-black hover:text-orange" href="/ui">UX / UI</a> -->
-				<a class="font-medium text-black hover:text-orange" href="/automation">Automation</a>
+				<a class="font-medium text-black hover:text-orange" href="/automation">Automation as a Service</a>
 				<a class="font-medium text-black hover:text-orange" href="/nocode">Low Code / No Code</a>
 				<a class="font-medium text-black hover:text-orange" href="/about">About Us</a>
 			</div>
