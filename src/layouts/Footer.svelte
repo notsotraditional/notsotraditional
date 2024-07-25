@@ -6,16 +6,15 @@
 		{
 			heading: 'Services',
 			links: [
-				{ text: 'UX/UI', link: '/ui' },
-				{ text: 'Automation', link: '/automation' },
-				{ text: 'Low / No Code', link: '/code' },
+				{ text: 'Automation as a Service', link: '/automation' },
+				{ text: 'Low / No Code development', link: '/code' },
 			],
 		},
 		{
 			heading: 'Pages',
 			links: [
 				{ text: 'Home', link: '/' },
-				{ text: 'About us', link: '/about' },
+				// { text: 'About us', link: '/about' },
 				{ text: 'Enquire', link: '/enquire' },
 			],
 		},

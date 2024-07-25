@@ -1,0 +1,118 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Hero from '@layouts/Hero.svelte'
+import ContentLeft from '@layouts/ContentLeft.svelte'
+import ContentRight from '@layouts/ContentRight.svelte'
+import MobileAppDevelopment from '@assets/illustrations/NoCodeMobileApp.png'
+import WebAppDevelopment from '@assets/illustrations/NoCodeWebApp.png'
+import WebsiteDevelopment from '@assets/illustrations/NoCodeWebSiteDevelopment.png'
+import backend from '@assets/illustrations/backendIllustration.png'
+import FAQ from '@layouts/FAQ.svelte'
+---
+
+<Layout title="Low Code / No Code Developmet">
+	<Hero client:load>
+		<span slot="heading" class="text-center block max-w-6xl">Ship your app <span class="text-orange">faster</span>, with<span class="text-orange">&nbsp;no code / low code</span> </span>
+	</Hero>
+	<ContentLeft link="/enquire" id="whatIsLowCodeNoCode" client:load buttonText="Get in touch">
+		<Fragment slot="heading">No / Low code<span class="text-orange">website development</span></Fragment>
+		<Fragment slot="description">
+			Ship your website faster and cheaper with low / no code development. From simple websites to complex websites, we can build websites for you.
+			We can help you build your next ecommerce website, landing page, blog.
+		</Fragment>
+		<img
+			slot="image"
+			src={WebsiteDevelopment.src}
+			height={WebsiteDevelopment.height}
+			width={WebsiteDevelopment.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentLeft>
+	<ContentRight link="/enquire" id="lowCodeWebApps" client:visible buttonText="Get in touch">
+		<img
+			slot="image"
+			src={WebAppDevelopment.src}
+			height={WebAppDevelopment.height}
+			width={WebAppDevelopment.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+		<Fragment slot="heading">Low / No Code <span class="text-orange">Web App</span> development</Fragment>
+		<Fragment slot="description">
+			Web apps are application accessible from a browser. These applications have a wide reach due to browsers being available on mobile and desktop devices.
+			Using low / no code development, we utilise industry recgonised visual builders and API's to ship faster, cheaper and more efficiently.
+		</Fragment>
+	</ContentRight>
+	<ContentLeft link="/enquire" id="lowCodeMobileApps" client:visible buttonText="Get in touch">
+		<Fragment slot="heading"><span class="text-orange">Low / No Code</span> Mobile App development</Fragment>
+		<Fragment slot="description">
+			Utilising industry recognised visual builders and API's, we can build mobile apps that are accessible from a mobile device.
+			Build your app for iOS and Android with no code development and save time and money.
+		</Fragment>
+		<img
+			slot="image"
+			src={MobileAppDevelopment.src}
+			height={MobileAppDevelopment.height}
+			width={MobileAppDevelopment.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentLeft>
+	<ContentRight link="/enquire" id="LowCodeBackend" client:visible buttonText="Get in touch">
+		<Fragment slot="heading"><span class="text-orange">Low / No Code</span> Backend development</Fragment>
+		<Fragment slot="description">
+			Ship API's faster and cheaper with low / no code development. From simple CRUD operations to complex integrations, we can build backends for you.
+			Still need to use some code, the tools we use allows devs to still utilise coding to build a even more complex backend.
+		</Fragment>
+		<img
+			slot="image"
+			src={backend.src}
+			height={backend.height}
+			width={backend.width}
+			alt="Illustration depicting a automation example with WebFlow, HubSpot, Slack and Customer IO"
+			class="lg:max-w-[350px] xl:max-w-[500px] w-full"
+		/>
+	</ContentRight>
+	<FAQ
+		client:visible
+		items={[
+			{
+				title: 'Does low / no code development cut corners?',
+				content:
+					'No, you will still get the same quality and benefits as you would with traditional development. Low / no code development platforms reduces the complexity of the development process, allowing you to focus on shipping your app.',
+				id: 'quality',
+			},
+			{
+				title: 'Will other devs still be able to update my application with code?',
+				content:
+					'Yes, most no / low code development platforms allow you to inspect code, add custom code and update your application.',
+				id: 'devs',
+			},
+			{
+				title: 'What is the difference between low / no code development and traditional development?',
+				content:
+					'Traditional development involves using developers to write the applications logic, sometimes spending a lot of time on this. Low / no code development platforms allow you to do more with less time and resources because the coding requirments are reduced.',
+				id: 'difference',
+			},
+			{
+				title: 'After my application is shipped can I update it with additional features?',
+				content:
+					'Absolutely! We are also happy to help you with any additional features you might require. Get in touch with us and we will be happy to discuss your needs.',
+				id: 'update',
+			},
+			{
+				title: 'Is no code development cheaper than traditional development?',
+				content:
+					'Yes, because you use less development resources and time, shipping on a low / no code development platform is cheaper than traditional development.',
+				id: 'cheaper',
+			},
+			{
+				title: 'Does low / no code development tools have a monthly fee?',
+				content:
+					'Yes, just like traditional development, depending on the level of complexity of your application, you will need to pay for a monthly fee to use the tools and in some cases host your app. Before we implement anything we will provide you with breakdown of estimated costs, along with how much you could save.',
+				id: 'cost',
+			}
+		]}
+	/>
+</Layout>

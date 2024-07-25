@@ -1,0 +1,11 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Hero from '@layouts/Hero.svelte'
+import EnquireForm from '@components/Forms/EnquireForm.svelte'
+---
+<Layout title="Low Code / No Code Developmet">
+	<Hero client:load>
+		<span slot="heading" class="text-center block max-w-6xl">Let's get in touch to <span class="text-orange"> help you move forward</span></span>
+	</Hero>
+    <EnquireForm client:load/>
+</Layout>

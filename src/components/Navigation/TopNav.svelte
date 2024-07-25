@@ -7,7 +7,7 @@
 
 <header class="dark:bg-neutral-800 flex w-full flex-wrap py-8 text-lg lg:flex-nowrap lg:justify-start">
 	<nav class="mx-auto flex w-full max-w-[85rem] basis-full flex-wrap items-center justify-between px-4 md:px-10" aria-label="Global">
-		<a class="flex-none text-xl font-semibold lg:order-1 dark:text-white" href="#"><img src={Logo.src} /></a>
+		<a class="flex-none text-xl font-semibold lg:order-1 dark:text-white" href="/"><img src={Logo.src} /></a>
 		<div class="flex items-center gap-x-2 lg:order-3">
 			<button
 				type="button"
@@ -47,11 +47,11 @@
 			id="navbar-alignment"
 			class="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 lg:order-2 lg:block lg:grow-0 lg:basis-auto">
 			<div class="mt-5 flex flex-col gap-8 text-base lg:mt-0 lg:flex-row lg:items-center lg:ps-5">
-				<a class="font-medium text-black hover:text-orange" href="#" aria-current="page">Home</a>
+				<a class="font-medium text-black hover:text-orange" href="/" aria-current="page">Home</a>
 				<!-- <a class="font-medium text-black hover:text-orange" href="/ui">UX / UI</a> -->
 				<a class="font-medium text-black hover:text-orange" href="/automation">Automation as a Service</a>
-				<a class="font-medium text-black hover:text-orange" href="/nocode">Low Code / No Code</a>
-				<a class="font-medium text-black hover:text-orange" href="/about">About Us</a>
+				<a class="font-medium text-black hover:text-orange" href="/code">Low Code / No Code</a>
+				<!-- <a class="font-medium text-black hover:text-orange" href="/about">About Us</a> -->
 			</div>
 		</div>
 	</nav>

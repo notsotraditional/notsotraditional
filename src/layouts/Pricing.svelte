@@ -5,7 +5,7 @@
     let tiers = [
       {
         title: "Pay as you go",
-        targetAudience: "Flexibility at Your Fingertips - Pay Only for What You Use. Perfect for Small Businesses and Project-Based Work. Optional discovery service and support available on an hourly basis. Prices exclude VAT and any tool subscriptions or costs.",
+        targetAudience: "Flexibility at Your Fingertips - Pay Only for What You Use. Perfect for Small Businesses and Project-Based Work. Prices exclude VAT and any tool subscriptions or costs.",
         pricing: "R900 / £50 / €55 per hour",
         includedHours: "N/A",
         additionalHours: "R900 / £50 / €55 per hour",
