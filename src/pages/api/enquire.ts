@@ -2,8 +2,8 @@ export const prerender = false
 export const POST = async ({ request } )  =>{
 
     try {
-        const { recaptcha, firstname, lastname, email, contactNumber, website, companyName, additionalContent, webApp, mobileApp, websiteDev, automationAsAService } = await request.json();
-
+        const {  firstname, lastname, email, contactNumber, website, companyName, additionalContent, webApp, mobileApp, websiteDev, automationAsAService } = await request.json();
+//recaptcha,
         // if(recaptcha === undefined){
         //     return new Response(JSON.stringify({ error: 'Unable to authorize' }), { status: 401 });
         // }
@@ -24,8 +24,8 @@ export const POST = async ({ request } )  =>{
         //   body: requestBody.toString()
         // });
 
-
-        const webhook = await fetch(import.meta.env.AUTOMATION_WEBHOOK,{
+        // const webhook = 
+        await fetch(import.meta.env.AUTOMATION_WEBHOOK,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

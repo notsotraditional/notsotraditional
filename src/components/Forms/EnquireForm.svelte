@@ -8,7 +8,7 @@
     let contactNumber = '';
     let websiteUrl = '';
     let additionalContent = '';
-    let selectedServices = [];
+    // let selectedServices = [];
 
     const services = [
       'Web App development',
