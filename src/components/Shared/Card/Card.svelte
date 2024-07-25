@@ -35,8 +35,8 @@
     <p class="mt-1 text-base font-medium text-orange">Support</p>
     <p class="mt-2 text-black mb-3">{tier.support}</p>
 
-    <p class="mt-1 text-base font-medium text-orange">Discovery Service</p>
-    <p class="mt-2 text-black mb-3">{tier.discoveryService}</p>
+    <!-- <p class="mt-1 text-base font-medium text-orange">Discovery Service</p>
+    <p class="mt-2 text-black mb-3">{tier.discoveryService}</p> -->
 
     <p class="mt-1 text-base font-medium text-orange">Usage Reports</p>
     <p class="mt-2 text-black mb-3">{tier.usageReports}</p>
