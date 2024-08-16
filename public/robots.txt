@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://notsotraditional.com/sitemap.xml
